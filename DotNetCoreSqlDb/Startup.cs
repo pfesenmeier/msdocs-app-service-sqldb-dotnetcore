@@ -29,7 +29,7 @@ namespace DotNetCoreSqlDb
         {
             services.AddControllersWithViews();
             services.AddDbContext<MyDatabaseContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("AZURE_POSTGRESQL_CONNECTIONSTRING")));
+                    options.UseNpqsql(Configuration.GetConnectionString("AZURE_POSTGRESQL_CONNECTIONSTRING")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
